@@ -44,8 +44,10 @@ import vue3videoPlay from 'vue3-video-play' // 引入组件
 import 'vue3-video-play/dist/style.css' // 引入css
 
 import '@/utils/console'
+import particleExplosion from '@/utils/particleExplosion'
 
 app.use(store)
 app.use(router)
 app.use(vue3videoPlay)
+app.directive('particle-explosion', particleExplosion)
 app.mount('#app')

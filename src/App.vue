@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app" v-particle-explosion>
     <!-- 路由展示  -->
     <router-view> </router-view>
   </div>

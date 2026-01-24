@@ -19,37 +19,21 @@
     <!-- 底部 -->
     <BottomControl />
     <!-- 唱片 -->
-    <el-drawer
-      class="drawer"
-      v-model="isRecordPage"
-      direction="btt"
-      :show-close="false"
-      :with-header="false"
-      size="100%"
-      :z-index="76"
-    >
+    <el-drawer class="drawer" v-model="isRecordPage" direction="btt" :show-close="false" :with-header="false"
+      size="100%" :z-index="76">
       <Record v-show="true" />
     </el-drawer>
 
     <!-- 弹窗 -->
 
-    <el-dialog
-      class="homeDialog"
-      v-model="dialogVisible"
-      append-to-body
-      title="欢迎来到小罗音乐"
-      width="30%"
-      center
-      destroy-on-close
-    >
+    <el-dialog class="homeDialog" v-model="dialogVisible" append-to-body title="欢迎来到小罗音乐" width="30%" center
+      destroy-on-close>
       <div class="box">
         <p>此项目仅供学习</p>
-        <p>原创不易,希望各位大哥点个start</p>
+        <p>原创不易,希望点个start</p>
         <p>
           源码地址:
-          <a href="https://github.com/coderxiaoluo" target="_blank"
-            >https://github.com/coderxiaoluo</a
-          >
+          <a href="https://github.com/coderxiaoluo" target="_blank">https://github.com/coderxiaoluo</a>
         </p>
         <p></p>
       </div>
@@ -109,10 +93,12 @@ if (!localCache.getCache('UserLogo')) localCache.setCache('UserLogo', 'xiaoluoMu
 .home {
   width: 100%;
   height: 100%;
+
   .el-container {
     width: 100%;
     height: 100%;
   }
+
   // 顶部
   .el-header {
     padding: 0;
@@ -125,6 +111,7 @@ if (!localCache.getCache('UserLogo')) localCache.setCache('UserLogo', 'xiaoluoMu
     background-color: var(--music-aside-bgc);
     transition: all 0.3s ease-in-out; // 缩短过渡动画时长，使用更平滑的缓动函数
   }
+
   // 主体
   .el-main {
     padding: 0;
@@ -134,6 +121,7 @@ if (!localCache.getCache('UserLogo')) localCache.setCache('UserLogo', 'xiaoluoMu
 :deep(.drawer) {
   --el-drawer-padding-primary: 0 !important;
 }
+
 :deep(.el-drawer__body) {
   --el-drawer-padding-primary: 0 !important;
 }
